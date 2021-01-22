@@ -1,0 +1,476 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.32.0.0
+Copyright (C) 2020 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Aleksander Strzeboñski, none, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.32.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.14.1
+Assembler:       Armasm.exe V6.14.1
+Linker/Locator:  ArmLink.exe V6.14.1
+Library Manager: ArmAr.exe V6.14.1
+Hex Converter:   FromElf.exe V6.14.1
+CPU DLL:         SARMCM3.DLL V5.32.0.0
+Dialog DLL:      DARMCM1.DLL V1.19.4.0
+Target DLL:      Segger\JL2CM3.dll V2.99.38.0
+Dialog DLL:      TARMCM1.DLL V1.14.3.0
+ 
+<h2>Project:</h2>
+C:\Users\as365\Documents\snake\snake.uvprojx
+Project File Date:  01/20/2021
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.14.1', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Build target 'FRDM-KL05ZJ'
+main.c(2): warning: In file included from...
+./keyboard.h(13): warning: no previous prototype for function 'del_ms' [-Wmissing-prototypes]
+void del_ms( int n) {
+     ^
+./keyboard.h(13): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void del_ms( int n) {
+^
+static 
+./keyboard.h(30): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                PTA->PDDR &= ~((1<<R3_POS)|(1<<R2_POS)|(1<<R1_POS)); //set rest rows as input
+                          ~~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./keyboard.h(31): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                PTA->PDOR &= ~(1<<R4_POS); //setting zero on row4
+                          ~~ ^~~~~~~~~~~~
+./keyboard.h(64): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                PTA->PDDR &= ~((1<<R4_POS)|(1<<R2_POS)|(1<<R1_POS)); //set rest rows as input
+                          ~~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./keyboard.h(65): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                PTA->PDOR &= ~(1<<R3_POS); //setting zero on row3
+                          ~~ ^~~~~~~~~~~~
+./keyboard.h(98): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                PTA->PDDR &= ~((1<<R4_POS)|(1<<R3_POS)|(1<<R1_POS)); //set rest rows as input
+                          ~~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./keyboard.h(99): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                PTA->PDOR &= ~(1<<R2_POS); //setting zero on row2
+                          ~~ ^~~~~~~~~~~~
+./keyboard.h(132): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                PTA->PDDR &= ~((1<<R4_POS)|(1<<R3_POS)|(1<<R2_POS)); //set rest rows as input
+                          ~~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./keyboard.h(133): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                PTA->PDOR &= ~(1<<R1_POS); //setting zero on row1
+                          ~~ ^~~~~~~~~~~~
+./keyboard.h(166): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        PTA->PDOR &= ~((1<<R4_POS)|(1<<R3_POS)|(1<<R2_POS)|(1<<R1_POS));
+                  ~~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./keyboard.h(23): warning: no previous prototype for function 'PORTA_IRQHandler' [-Wmissing-prototypes]
+void PORTA_IRQHandler(void){
+     ^
+./keyboard.h(23): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void PORTA_IRQHandler(void){
+^
+static 
+./keyboard.h(192): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        PTA->PDOR &= ~((1<<R4_POS)|(1<<R3_POS)|(1<<R2_POS)|(1<<R1_POS));
+                  ~~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./keyboard.h(178): warning: no previous prototype for function 'buttonsInitialize' [-Wmissing-prototypes]
+void buttonsInitialize(){
+     ^
+./keyboard.h(178): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void buttonsInitialize(){
+^
+static 
+main.c(3): warning: In file included from...
+./NOKIA_LCD.h(27): warning: no previous extern declaration for non-static variable 'direction' [-Wmissing-variable-declarations]
+uint8_t direction=1; //direction 1->prawo; 2->gora 3->lewo 4->dol
+        ^
+./NOKIA_LCD.h(27): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint8_t direction=1; //direction 1->prawo; 2->gora 3->lewo 4->dol
+^
+./NOKIA_LCD.h(28): warning: no previous extern declaration for non-static variable 'food_eaten' [-Wmissing-variable-declarations]
+uint8_t food_eaten=1;
+        ^
+./NOKIA_LCD.h(28): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint8_t food_eaten=1;
+^
+./NOKIA_LCD.h(35): warning: no previous extern declaration for non-static variable 'game_over_screen' [-Wmissing-variable-declarations]
+const unsigned char game_over_screen[wid*hei] ={/*1*/0x0,0x0,0x0,0x0,0xff,0xff,0xff,0xff,0xf,0xf,0xf,0xf,0xf,0xf,0xf,0xf,0xf,0xf,0xf,0xf,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0xf0,0xf0,
+                    ^
+./NOKIA_LCD.h(35): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+const unsigned char game_over_screen[wid*hei] ={/*1*/0x0,0x0,0x0,0x0,0xff,0xff,0xff,0xff,0xf,0xf,0xf,0xf,0xf,0xf,0xf,0xf,0xf,0xf,0xf,0xf,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0xf0,0xf0,
+      ^
+./NOKIA_LCD.h(61): warning: excess elements in array initializer
+        0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,
+                                                                                                                                                ^~~
+./NOKIA_LCD.h(50): warning: no previous extern declaration for non-static variable 'home_screen' [-Wmissing-variable-declarations]
+const unsigned char home_screen[wid*hei] ={/*1*/0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0xf0,0xf0,0xf0,0xf0,0xf0,0xf0,0xf0,0xf0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,
+                    ^
+./NOKIA_LCD.h(50): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+const unsigned char home_screen[wid*hei] ={/*1*/0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0xf0,0xf0,0xf0,0xf0,0xf0,0xf0,0xf0,0xf0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,
+      ^
+./NOKIA_LCD.h(63): warning: no previous prototype for function 'delay_us' [-Wmissing-prototypes]
+void delay_us( int n) {
+     ^
+./NOKIA_LCD.h(63): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void delay_us( int n) {
+^
+static 
+./NOKIA_LCD.h(70): warning: no previous prototype for function 'delay_ms' [-Wmissing-prototypes]
+void delay_ms( int n) {
+     ^
+./NOKIA_LCD.h(70): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void delay_ms( int n) {
+^
+static 
+./NOKIA_LCD.h(77): warning: no previous prototype for function 'setup' [-Wmissing-prototypes]
+void setup()
+     ^
+./NOKIA_LCD.h(77): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void setup()
+^
+static 
+./NOKIA_LCD.h(90): warning: no previous prototype for function 'set_portb_bit' [-Wmissing-prototypes]
+void set_portb_bit(uint8_t n){
+     ^
+./NOKIA_LCD.h(90): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void set_portb_bit(uint8_t n){
+^
+static 
+./NOKIA_LCD.h(93): warning: no previous prototype for function 'clear_portb_bit' [-Wmissing-prototypes]
+void clear_portb_bit(uint8_t n){
+     ^
+./NOKIA_LCD.h(93): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void clear_portb_bit(uint8_t n){
+^
+static 
+./NOKIA_LCD.h(96): warning: no previous prototype for function 'check_bit' [-Wmissing-prototypes]
+uint8_t check_bit(uint8_t data, uint8_t n){
+        ^
+./NOKIA_LCD.h(96): note: declare 'static' if the function is not intended to be used outside of this translation unit
+uint8_t check_bit(uint8_t data, uint8_t n){
+^
+static 
+./NOKIA_LCD.h(113): warning: implicit conversion loses integer precision: 'int' to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+                if(check_bit(data,i))
+                   ~~~~~~~~~      ^
+./NOKIA_LCD.h(105): warning: no previous prototype for function 'pass_data' [-Wmissing-prototypes]
+void pass_data( uint8_t data )
+     ^
+./NOKIA_LCD.h(105): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void pass_data( uint8_t data )
+^
+static 
+./NOKIA_LCD.h(130): warning: no previous prototype for function 'display_blank' [-Wmissing-prototypes]
+void display_blank(){
+     ^
+./NOKIA_LCD.h(130): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void display_blank(){
+^
+static 
+./NOKIA_LCD.h(136): warning: no previous prototype for function 'display_normal' [-Wmissing-prototypes]
+void display_normal(){
+     ^
+./NOKIA_LCD.h(136): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void display_normal(){
+^
+static 
+./NOKIA_LCD.h(142): warning: no previous prototype for function 'display_inverse' [-Wmissing-prototypes]
+void display_inverse(){
+     ^
+./NOKIA_LCD.h(142): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void display_inverse(){
+^
+static 
+./NOKIA_LCD.h(148): warning: no previous prototype for function 'NOKIA_INIT' [-Wmissing-prototypes]
+void NOKIA_INIT()
+     ^
+./NOKIA_LCD.h(148): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void NOKIA_INIT()
+^
+static 
+./NOKIA_LCD.h(177): warning: no previous prototype for function 'set_char' [-Wmissing-prototypes]
+void set_char(unsigned char c, uint8_t x, uint8_t y){
+     ^
+./NOKIA_LCD.h(177): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void set_char(unsigned char c, uint8_t x, uint8_t y){
+^
+static 
+./NOKIA_LCD.h(457): warning: no previous prototype for function 'set_string' [-Wmissing-prototypes]
+void set_string(unsigned char c[],uint8_t len,uint8_t x, uint8_t y){
+     ^
+./NOKIA_LCD.h(457): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void set_string(unsigned char c[],uint8_t len,uint8_t x, uint8_t y){
+^
+static 
+./NOKIA_LCD.h(466): warning: implicit conversion loses integer precision: 'int' to 'unsigned char' [-Wimplicit-int-conversion]
+        set_char(d,76,1);
+        ~~~~~~~~ ^
+./NOKIA_LCD.h(464): warning: no previous prototype for function 'set_first_digit' [-Wmissing-prototypes]
+void set_first_digit(int d){
+     ^
+./NOKIA_LCD.h(464): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void set_first_digit(int d){
+^
+static 
+./NOKIA_LCD.h(470): warning: implicit conversion loses integer precision: 'int' to 'unsigned char' [-Wimplicit-int-conversion]
+        set_char(d,70,1);
+        ~~~~~~~~ ^
+./NOKIA_LCD.h(468): warning: no previous prototype for function 'set_second_digit' [-Wmissing-prototypes]
+void set_second_digit(int d){
+     ^
+./NOKIA_LCD.h(468): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void set_second_digit(int d){
+^
+static 
+./NOKIA_LCD.h(474): warning: implicit conversion loses integer precision: 'int' to 'unsigned char' [-Wimplicit-int-conversion]
+        set_char(d,64,1);
+        ~~~~~~~~ ^
+./NOKIA_LCD.h(472): warning: no previous prototype for function 'set_third_digit' [-Wmissing-prototypes]
+void set_third_digit(int d){
+     ^
+./NOKIA_LCD.h(472): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void set_third_digit(int d){
+^
+static 
+./NOKIA_LCD.h(477): warning: no previous prototype for function 'set_clear' [-Wmissing-prototypes]
+void set_clear(){
+     ^
+./NOKIA_LCD.h(477): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void set_clear(){
+^
+static 
+./NOKIA_LCD.h(483): warning: no previous prototype for function 'display' [-Wmissing-prototypes]
+void display(){
+     ^
+./NOKIA_LCD.h(483): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void display(){
+^
+static 
+./NOKIA_LCD.h(491): warning: no previous prototype for function 'set_game_over_screen' [-Wmissing-prototypes]
+void set_game_over_screen(){
+     ^
+./NOKIA_LCD.h(491): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void set_game_over_screen(){
+^
+static 
+./NOKIA_LCD.h(497): warning: no previous prototype for function 'set_welcome_screen' [-Wmissing-prototypes]
+void set_welcome_screen(){
+     ^
+./NOKIA_LCD.h(497): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void set_welcome_screen(){
+^
+static 
+./NOKIA_LCD.h(503): warning: passing 'char [10]' to parameter of type 'unsigned char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+        set_string("PRESS ANY", 9, 0, 1);
+                   ^~~~~~~~~~~
+./NOKIA_LCD.h(457): note: passing argument to parameter 'c' here
+void set_string(unsigned char c[],uint8_t len,uint8_t x, uint8_t y){
+                              ^
+./NOKIA_LCD.h(504): warning: passing 'char [15]' to parameter of type 'unsigned char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+        set_string("BUTTON TO PLAY", 14, 0, 2);
+                   ^~~~~~~~~~~~~~~~
+./NOKIA_LCD.h(457): note: passing argument to parameter 'c' here
+void set_string(unsigned char c[],uint8_t len,uint8_t x, uint8_t y){
+                              ^
+./NOKIA_LCD.h(505): warning: passing 'char [12]' to parameter of type 'unsigned char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+        set_string("LAST SCORE:", 11, 0, 3);
+                   ^~~~~~~~~~~~~
+./NOKIA_LCD.h(457): note: passing argument to parameter 'c' here
+void set_string(unsigned char c[],uint8_t len,uint8_t x, uint8_t y){
+                              ^
+./NOKIA_LCD.h(509): warning: passing 'char [12]' to parameter of type 'unsigned char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+        set_string("HIGH SCORE:", 11, 0, 4);
+                   ^~~~~~~~~~~~~
+./NOKIA_LCD.h(457): note: passing argument to parameter 'c' here
+void set_string(unsigned char c[],uint8_t len,uint8_t x, uint8_t y){
+                              ^
+./NOKIA_LCD.h(502): warning: no previous prototype for function 'set_init_screen' [-Wmissing-prototypes]
+void set_init_screen(){
+     ^
+./NOKIA_LCD.h(502): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void set_init_screen(){
+^
+static 
+./NOKIA_LCD.h(514): warning: no previous prototype for function 'set_frame' [-Wmissing-prototypes]
+void set_frame(){
+     ^
+./NOKIA_LCD.h(514): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void set_frame(){
+^
+static 
+./NOKIA_LCD.h(529): warning: no previous prototype for function 'set_clear_without_frame' [-Wmissing-prototypes]
+void set_clear_without_frame(){
+     ^
+./NOKIA_LCD.h(529): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void set_clear_without_frame(){
+^
+static 
+./NOKIA_LCD.h(537): warning: implicit conversion loses integer precision: 'int' to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+                snake[i][0]=20-i; //wsp. x
+                           ~~~^~
+./NOKIA_LCD.h(534): warning: no previous prototype for function 'init_snake' [-Wmissing-prototypes]
+void init_snake(){      
+     ^
+./NOKIA_LCD.h(534): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void init_snake(){      
+^
+static 
+./NOKIA_LCD.h(542): warning: no previous prototype for function 'set_snake' [-Wmissing-prototypes]
+void set_snake(){
+     ^
+./NOKIA_LCD.h(542): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void set_snake(){
+^
+static 
+./NOKIA_LCD.h(553): warning: no previous prototype for function 'clear_snake' [-Wmissing-prototypes]
+void clear_snake(){
+     ^
+./NOKIA_LCD.h(553): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void clear_snake(){
+^
+static 
+./NOKIA_LCD.h(560): warning: no previous prototype for function 'snake_pos' [-Wmissing-prototypes]
+void snake_pos(){
+     ^
+./NOKIA_LCD.h(560): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void snake_pos(){
+^
+static 
+./NOKIA_LCD.h(583): warning: no previous prototype for function 'set_pix' [-Wmissing-prototypes]
+void set_pix(uint8_t x, uint8_t y)
+     ^
+./NOKIA_LCD.h(583): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void set_pix(uint8_t x, uint8_t y)
+^
+static 
+./NOKIA_LCD.h(588): warning: no previous prototype for function 'food_pos_set' [-Wmissing-prototypes]
+void food_pos_set(){
+     ^
+./NOKIA_LCD.h(588): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void food_pos_set(){
+^
+static 
+./NOKIA_LCD.h(605): warning: no previous prototype for function 'check_food' [-Wmissing-prototypes]
+void check_food()
+     ^
+./NOKIA_LCD.h(605): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void check_food()
+^
+static 
+./NOKIA_LCD.h(614): warning: no previous prototype for function 'check_snake' [-Wmissing-prototypes]
+void check_snake()
+     ^
+./NOKIA_LCD.h(614): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void check_snake()
+^
+static 
+./NOKIA_LCD.h(621): warning: no previous prototype for function 'set_score' [-Wmissing-prototypes]
+void set_score()
+     ^
+./NOKIA_LCD.h(621): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void set_score()
+^
+static 
+main.c(2): warning: In file included from...
+./keyboard.h(20): warning: no previous extern declaration for non-static variable 'button_pushed_nb' [-Wmissing-variable-declarations]
+volatile uint8_t button_pushed_nb;
+                 ^
+./keyboard.h(20): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+volatile uint8_t button_pushed_nb;
+         ^
+./keyboard.h(21): warning: no previous extern declaration for non-static variable 'button_pushed' [-Wmissing-variable-declarations]
+volatile uint8_t button_pushed;
+                 ^
+./keyboard.h(21): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+volatile uint8_t button_pushed;
+         ^
+main.c(3): warning: In file included from...
+./NOKIA_LCD.h(20): warning: no previous extern declaration for non-static variable 'RAM' [-Wmissing-variable-declarations]
+uint8_t RAM[wid*hei];
+        ^
+./NOKIA_LCD.h(20): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint8_t RAM[wid*hei];
+^
+./NOKIA_LCD.h(25): warning: no previous extern declaration for non-static variable 'snake' [-Wmissing-variable-declarations]
+uint8_t snake[880][2];
+        ^
+./NOKIA_LCD.h(25): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint8_t snake[880][2];
+^
+./NOKIA_LCD.h(26): warning: no previous extern declaration for non-static variable 'snake_length' [-Wmissing-variable-declarations]
+int snake_length;
+    ^
+./NOKIA_LCD.h(26): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int snake_length;
+^
+./NOKIA_LCD.h(29): warning: no previous extern declaration for non-static variable 'timer' [-Wmissing-variable-declarations]
+int timer;
+    ^
+./NOKIA_LCD.h(29): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int timer;
+^
+./NOKIA_LCD.h(30): warning: no previous extern declaration for non-static variable 'x_food' [-Wmissing-variable-declarations]
+uint8_t x_food;
+        ^
+./NOKIA_LCD.h(30): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint8_t x_food;
+^
+./NOKIA_LCD.h(31): warning: no previous extern declaration for non-static variable 'y_food' [-Wmissing-variable-declarations]
+uint8_t y_food;
+        ^
+./NOKIA_LCD.h(31): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint8_t y_food;
+^
+./NOKIA_LCD.h(32): warning: no previous extern declaration for non-static variable 'score' [-Wmissing-variable-declarations]
+int score;
+    ^
+./NOKIA_LCD.h(32): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int score;
+^
+./NOKIA_LCD.h(33): warning: no previous extern declaration for non-static variable 'high_score' [-Wmissing-variable-declarations]
+int high_score;
+    ^
+./NOKIA_LCD.h(33): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int high_score;
+^
+./NOKIA_LCD.h(34): warning: no previous extern declaration for non-static variable 'game_over' [-Wmissing-variable-declarations]
+int game_over;
+    ^
+./NOKIA_LCD.h(34): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int game_over;
+^
+70 warnings generated.
+compiling main.c...
+linking...
+Program Size: Code=5984 RO-data=1232 RW-data=4 ZI-data=2648  
+".\Objects\snake.axf" - 0 Error(s), 70 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.7.0.pack
+                ARM.CMSIS.5.7.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.4.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.Kinetis_KLxx_DFP.1.15.0.pack
+                Keil.Kinetis_KLxx_DFP.1.15.0
+                NXP Kinetis KLxx Series Device Support and Examples
+   * Component: Startup Version: 1.0.0
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_FRDM-KL05ZJ
+  C:\Users\as365\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include
+  C:\Users\as365\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.0\Device\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.4.0
+
+   * Component: Keil::Device:Startup:1.0.0
+      Source file:   Device\Source\system_MKL05Z4.c
+      Source file:   Device\Source\ARM\startup_MKL05Z4.s
+Build Time Elapsed:  00:00:07
+</pre>
+</body>
+</html>
